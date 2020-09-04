@@ -45,7 +45,7 @@
 </div>
 <div class="discussion">
     <p>This type can be used in your application's state in order to control the presentation or
-dismissal of action sheets. It is preferrable to use this API instead of the default SwiftUI API
+dismissal of action sheets. It is preferable to use this API instead of the default SwiftUI API
 for action sheets because SwiftUI uses 2-way bindings in order to control the showing and
 dismissal of sheets, and that does not play nicely with the Composable Architecture. The library
 requires that all state mutations happen by sending an action so that a reducer can handle that
@@ -169,7 +169,7 @@ so that you can handle its logic.</p>
     <h3>
         <code>init(title:​message:​buttons:​)</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">title</span>: <span class="type">String</span>, <span class="variable">message</span>: <span class="type">String</span>? = <span class="keyword">nil</span>, <span class="variable">buttons</span>: [<span class="type">Button</span>])</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">title</span>: <span class="type">LocalizedStringKey</span>, <span class="variable">message</span>: <span class="type">LocalizedStringKey</span>? = <span class="keyword">nil</span>, <span class="variable">buttons</span>: [<span class="type">Button</span>])</code></pre></body></html>
 </div>
     </section>
     <section id="properties">
@@ -191,13 +191,13 @@ so that you can handle its logic.</p>
     <h3>
         <code>message</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">message</span>: <span class="type">String</span>?</code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">message</span>: <span class="type">LocalizedStringKey</span>?</code></pre></body></html>
 </div>
 <div role="article" class="variable" id="actionsheetstate.title">
     <h3>
         <code>title</code>
     </h3>
-    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">title</span>: <span class="type">String</span></code></pre></body></html>
+    <html><body><pre class="highlight"><code><span class="keyword">var</span> <span class="variable">title</span>: <span class="type">LocalizedStringKey</span></code></pre></body></html>
 </div>
 <div role="article" class="variable" id="actionsheetstate.debugoutput">
     <h3>
@@ -214,7 +214,7 @@ so that you can handle its logic.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-04T16:57:05+0000">September 4, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>

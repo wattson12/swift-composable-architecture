@@ -26,7 +26,7 @@
     <nav>
         <div class="wrapper">
             <h2>On This Page</h2>
-            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#identifiedarray.init(_:id:)">init(_:​id:​)</a></li><li class="initializer"><a href="#identifiedarray.init(id:)">init(id:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#identifiedarray.id">id</a></li><li class="variable"><a href="#identifiedarray.ids">ids</a></li><li class="variable"><a href="#identifiedarray.elements">elements</a></li><li class="variable"><a href="#identifiedarray.startindex">start​Index</a></li><li class="variable"><a href="#identifiedarray.endindex">end​Index</a></li><li class="variable"><a href="#identifiedarray.debugdescription">debug​Description</a></li><li class="variable"><a href="#identifiedarray.custommirror">custom​Mirror</a></li><li class="variable"><a href="#identifiedarray.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#identifiedarray.index(after:)">index(after:​)</a></li><li class="function"><a href="#identifiedarray.index(before:)">index(before:​)</a></li><li class="function"><a href="#identifiedarray.insert(_:at:)">insert(_:​at:​)</a></li><li class="function"><a href="#identifiedarray.insert(contentsof:at:)">insert(contents​Of:​at:​)</a></li><li class="function"><a href="#identifiedarray.remove(id:)">remove(id:​)</a></li><li class="function"><a href="#identifiedarray.remove(at:)">remove(at:​)</a></li><li class="function"><a href="#identifiedarray.removeall(where:)">remove​All(where:​)</a></li><li class="function"><a href="#identifiedarray.remove(atoffsets:)">remove(at​Offsets:​)</a></li><li class="function"><a href="#identifiedarray.move(fromoffsets:tooffset:)">move(from​Offsets:​to​Offset:​)</a></li><li class="function"><a href="#identifiedarray.sort(by:)">sort(by:​)</a></li></ul></li></ol>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#identifiedarray.init(_:id:)">init(_:​id:​)</a></li><li class="initializer"><a href="#identifiedarray.init(id:)">init(id:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#identifiedarray.id">id</a></li><li class="variable"><a href="#identifiedarray.ids">ids</a></li><li class="variable"><a href="#identifiedarray.elements">elements</a></li><li class="variable"><a href="#identifiedarray.startindex">start​Index</a></li><li class="variable"><a href="#identifiedarray.endindex">end​Index</a></li><li class="variable"><a href="#identifiedarray.debugdescription">debug​Description</a></li><li class="variable"><a href="#identifiedarray.custommirror">custom​Mirror</a></li><li class="variable"><a href="#identifiedarray.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#identifiedarray.index(after:)">index(after:​)</a></li><li class="function"><a href="#identifiedarray.index(before:)">index(before:​)</a></li><li class="function"><a href="#identifiedarray.insert(_:at:)">insert(_:​at:​)</a></li><li class="function"><a href="#identifiedarray.insert(contentsof:at:)">insert(contents​Of:​at:​)</a></li><li class="function"><a href="#identifiedarray.remove(id:)">remove(id:​)</a></li><li class="function"><a href="#identifiedarray.remove(at:)">remove(at:​)</a></li><li class="function"><a href="#identifiedarray.removeall(where:)">remove​All(where:​)</a></li><li class="function"><a href="#identifiedarray.remove(atoffsets:)">remove(at​Offsets:​)</a></li><li class="function"><a href="#identifiedarray.move(fromoffsets:tooffset:)">move(from​Offsets:​to​Offset:​)</a></li><li class="function"><a href="#identifiedarray.sort(by:)">sort(by:​)</a></li><li class="function"><a href="#identifiedarray.shuffle(using:)">shuffle(using:​)</a></li><li class="function"><a href="#identifiedarray.shuffle()">shuffle()</a></li><li class="function"><a href="#identifiedarray.reverse()">reverse()</a></li></ul></li></ol>
         </div>
     </nav>
 
@@ -318,6 +318,24 @@ identifier.</p>
     </h3>
     <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">sort</span>(<span class="variable">by</span> <span class="variable">areInIncreasingOrder</span>: (<span class="type">Element</span>, <span class="type">Element</span>) <span class="keyword">throws</span> -&gt; <span class="type">Bool</span>) <span class="keyword">rethrows</span></code></pre></body></html>
 </div>
+<div role="article" class="function" id="identifiedarray.shuffle(using:)">
+    <h3>
+        <code>shuffle(using:​)</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">shuffle</span>&lt;<span class="variable">T</span>&gt;(<span class="variable">using</span> <span class="variable">generator</span>: <span class="keyword">inout</span> <span class="type">T</span>) <span class="keyword">where</span> <span class="type">T</span>: <span class="type">RandomNumberGenerator</span></code></pre></body></html>
+</div>
+<div role="article" class="function" id="identifiedarray.shuffle()">
+    <h3>
+        <code>shuffle()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">shuffle</span>()</code></pre></body></html>
+</div>
+<div role="article" class="function" id="identifiedarray.reverse()">
+    <h3>
+        <code>reverse()</code>
+    </h3>
+    <html><body><pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">reverse</span>()</code></pre></body></html>
+</div>
     </section>
 
 
@@ -327,7 +345,7 @@ identifier.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-04T16:57:04+0000">September 4, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>

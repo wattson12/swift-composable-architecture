@@ -49,11 +49,12 @@ views provided by SwiftUI. The known problematic views are:</p>
 
 <ul>
 <li>
-<p>If a <code>GeometryReader</code> is used inside a <code>WithViewStore</code> it will not receive state updates
-correctly. To work around you either need to reorder the views so that <code>GeometryReader</code>
-wraps the <code>WithViewStore</code>, or, if that is not possible, then you must hold onto an explicit
-<code>@ObservedObject var viewStore: ViewStore&lt;State, Action&gt;</code> in your view in lieu of using
-this helper (see <a href="https://gist.github.com/mbrandonw/cc5da3d487bcf7c4f21c27019a440d18">here</a>).</p>
+<p>If a <code>GeometryReader</code> or <code>ScrollViewReader</code> is used inside a <code>WithViewStore</code> it will not
+receive state updates correctly. To work around you either need to reorder the views so that
+the <code>GeometryReader</code> or <code>ScrollViewReader</code> wraps <code>WithViewStore</code>, or, if that is not possible,
+then you must hold onto an explicit <code>@ObservedObject var viewStore: ViewStore&lt;State, Action&gt;</code>
+in your view in lieu of using this helper (see
+<a href="https://gist.github.com/mbrandonw/cc5da3d487bcf7c4f21c27019a440d18">here</a>).</p>
 </li>
 <li>
 <p>If you create a <code>Stepper</code> via the <code>Stepper.init(onIncrement:onDecrement:label:)</code> initializer
@@ -179,7 +180,7 @@ compute views from store state.</p>
 
     <footer>
         <p>
-    Generated on <time datetime="2020-08-10T19:03:04+0000">August 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
+    Generated on <time datetime="2020-09-04T16:57:04+0000">September 4, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.4</span>.
 </p>
     </footer>
 </body>
