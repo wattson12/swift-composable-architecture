@@ -223,11 +223,13 @@ extension IdentifiedArray: CustomStringConvertible {
   }
 }
 
-extension IdentifiedArray: Decodable where Element: Decodable & Identifiable, ID == Element.ID {
-  public init(from decoder: Decoder) throws {
-    self.init(try [Element](from: decoder))
-  }
-}
+//@available(iOS 13.0, *)
+//extension IdentifiedArray: Decodable where Element: Decodable & Identifiable, ID == Element.ID {
+//
+//  public init(from decoder: Decoder) throws {
+//    self.init(try [Element](from: decoder))
+//  }
+//}
 
 extension IdentifiedArray: Encodable where Element: Encodable {
   public func encode(to encoder: Encoder) throws {
@@ -245,40 +247,51 @@ extension IdentifiedArray where Element: Comparable {
   }
 }
 
-extension IdentifiedArray: ExpressibleByArrayLiteral where Element: Identifiable, ID == Element.ID {
-  public init(arrayLiteral elements: Element...) {
-    self.init(elements)
-  }
-}
+//@available(iOS 13.0, *)
+//extension IdentifiedArray: ExpressibleByArrayLiteral where Element: Identifiable, ID == Element.ID {
+//
+//    @available(iOS 13.0, *)
+//  public init(arrayLiteral elements: Element...) {
+//    self.init(elements)
+//  }
+//}
 
+@available(iOS 13.0, *)
 extension IdentifiedArray where Element: Identifiable, ID == Element.ID {
+
+    @available(iOS 13.0, *)
   public init<S>(_ elements: S) where S: Sequence, S.Element == Element {
     self.init(elements, id: \.id)
   }
 }
 
-extension IdentifiedArray: RangeReplaceableCollection
-where Element: Identifiable, ID == Element.ID {
-  public init() {
-    self.init([], id: \.id)
-  }
-
-  public mutating func replaceSubrange<C, R>(_ subrange: R, with newElements: C)
-  where C: Collection, R: RangeExpression, Element == C.Element, Index == R.Bound {
-    let replacingIds = self.ids[subrange]
-    let newIds = newElements.map { $0.id }
-    ids.replaceSubrange(subrange, with: newIds)
-
-    for element in newElements {
-      self.dictionary[element.id] = element
-    }
-
-    for id in replacingIds where !self.ids.contains(id) {
-      self.dictionary[id] = nil
-    }
-  }
-}
+//@available(iOS 13.0, *)
+//extension IdentifiedArray: RangeReplaceableCollection
+//where Element: Identifiable, ID == Element.ID {
+//
+//    @available(iOS 13.0, *)
+//  public init() {
+//    self.init([], id: \.id)
+//  }
+//
+//    @available(iOS 13.0, *)
+//  public mutating func replaceSubrange<C, R>(_ subrange: R, with newElements: C)
+//  where C: Collection, R: RangeExpression, Element == C.Element, Index == R.Bound {
+//    let replacingIds = self.ids[subrange]
+//    let newIds = newElements.map { $0.id }
+//    ids.replaceSubrange(subrange, with: newIds)
+//
+//    for element in newElements {
+//      self.dictionary[element.id] = element
+//    }
+//
+//    for id in replacingIds where !self.ids.contains(id) {
+//      self.dictionary[id] = nil
+//    }
+//  }
+//}
 
 /// A convenience type to specify an `IdentifiedArray` by an identifiable element.
+@available(iOS 13.0, *)
 public typealias IdentifiedArrayOf<Element> = IdentifiedArray<Element.ID, Element>
 where Element: Identifiable

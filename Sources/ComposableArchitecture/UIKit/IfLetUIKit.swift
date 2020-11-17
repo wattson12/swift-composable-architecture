@@ -1,5 +1,6 @@
 import Combine
 
+@available(iOS 13.0, *)
 extension Store {
   /// Subscribes to updates when a store containing optional state goes from `nil` to non-`nil` or
   /// non-`nil` to `nil`.

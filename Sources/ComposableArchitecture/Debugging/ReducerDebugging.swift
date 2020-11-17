@@ -22,6 +22,7 @@ public enum ActionFormat {
   case prettyPrint
 }
 
+@available(iOS 13.0, *)
 extension Reducer {
   /// Prints debug messages describing all received actions and state mutations.
   ///
