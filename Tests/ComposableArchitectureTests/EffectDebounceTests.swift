@@ -2,6 +2,7 @@ import Combine
 import ComposableArchitecture
 import XCTest
 
+@available(iOS 13.0, *)
 final class EffectDebounceTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
 

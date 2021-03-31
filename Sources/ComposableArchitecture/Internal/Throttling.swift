@@ -1,6 +1,7 @@
 import Combine
 import Dispatch
 
+@available(iOS 13.0, *)
 extension Effect {
   /// Turns an effect into one that can be throttled.
   ///

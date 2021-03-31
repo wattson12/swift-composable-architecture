@@ -1,6 +1,7 @@
 import Combine
 import CombineSchedulers
 
+@available(iOS 13.0, *)
 extension Effect where Failure == Never {
   /// Returns an effect that repeatedly emits the current time of the given scheduler on the given
   /// interval.

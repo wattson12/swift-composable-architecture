@@ -3,6 +3,7 @@ import XCTest
 
 @testable import ComposableArchitecture
 
+@available(iOS 13.0, *)
 final class EffectTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
   let scheduler = DispatchQueue.testScheduler

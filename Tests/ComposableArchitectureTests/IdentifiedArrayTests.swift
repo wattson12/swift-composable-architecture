@@ -2,6 +2,7 @@ import XCTest
 
 @testable import ComposableArchitecture
 
+@available(iOS 13.0, *)
 final class IdentifiedArrayTests: XCTestCase {
   func testIdSubscript() {
     struct User: Equatable, Identifiable {

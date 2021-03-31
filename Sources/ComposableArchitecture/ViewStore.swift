@@ -41,7 +41,7 @@ import SwiftUI
 ///       self.viewStore.send(.incrementButtonTapped)
 ///     }
 ///
-@dynamicMemberLookup
+@available(iOS 13.0, *) @dynamicMemberLookup
 public final class ViewStore<State, Action>: ObservableObject {
   /// A publisher of state.
   public let publisher: StorePublisher<State>
@@ -216,6 +216,7 @@ public final class ViewStore<State, Action>: ObservableObject {
   }
 }
 
+@available(iOS 13.0, *)
 extension ViewStore where State: Equatable {
   public convenience init(_ store: Store<State, Action>) {
     self.init(store, removeDuplicates: ==)

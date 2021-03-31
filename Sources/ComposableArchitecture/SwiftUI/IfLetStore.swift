@@ -28,6 +28,7 @@ import SwiftUI
 ///        Text("Start!")
 ///      }
 ///
+@available(iOS 13.0, *)
 public struct IfLetStore<State, Action, Content>: View where Content: View {
   private let content: (ViewStore<State?, Action>) -> Content
   private let store: Store<State?, Action>

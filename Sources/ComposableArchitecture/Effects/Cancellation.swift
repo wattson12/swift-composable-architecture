@@ -1,6 +1,7 @@
 import Combine
 import Foundation
 
+@available(iOS 13.0, *)
 extension Effect {
   /// Turns an effect into one that is capable of being canceled.
   ///
@@ -74,5 +75,6 @@ extension Effect {
   }
 }
 
+@available(iOS 13.0, *)
 var cancellationCancellables: [AnyHashable: Set<AnyCancellable>] = [:]
 let cancellablesLock = NSRecursiveLock()

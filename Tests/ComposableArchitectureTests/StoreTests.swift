@@ -3,6 +3,7 @@ import XCTest
 
 @testable import ComposableArchitecture
 
+@available(iOS 13.0, *)
 final class StoreTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
 

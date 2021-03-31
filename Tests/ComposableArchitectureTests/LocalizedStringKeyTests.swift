@@ -3,6 +3,7 @@ import XCTest
 
 @testable import ComposableArchitecture
 
+@available(iOS 13.0, *)
 class LocalizedStringKeyTests: XCTestCase {
   func testFormatting() {
     XCTAssertEqual(

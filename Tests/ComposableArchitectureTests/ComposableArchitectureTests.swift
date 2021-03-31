@@ -3,6 +3,7 @@ import CombineSchedulers
 import ComposableArchitecture
 import XCTest
 
+@available(iOS 13.0, *)
 final class ComposableArchitectureTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
 

@@ -4,6 +4,7 @@ import ComposableArchitecture
 import XCTest
 import os.signpost
 
+@available(iOS 13.0, *)
 final class ReducerTests: XCTestCase {
   var cancellables: Set<AnyCancellable> = []
 
